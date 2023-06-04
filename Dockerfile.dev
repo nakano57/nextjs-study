@@ -1,4 +1,7 @@
 # Use an official Node.js runtime as a parent image
 FROM node:18-alpine
-RUN apk add git vim
-
+RUN apk update && apk upgrade && \
+    apk add --no-cache \
+    git \
+    vim \
+    sqlite
